@@ -1,0 +1,14 @@
+<% i=1 %>
+<% total=0 %>
+<% @cart.cart_items.each do |item| %>
+    <p>
+        商品<%= i %>:<%= item.product.name %> 値段:<%= item.product.price %>円 個数:<%= item.qty %>個
+        <%= link_to 'カートから削除', cart_item_path(item.id), method: :delete %>
+        <% total+=item.product.price*item.qty %>
+    </p>
+    <% i+=1 %>
+<% end %>
+
+<p> 合計金額: <%= total %>円 </p>
+
+<p> <%= link_to '商品一覧' , products_path %> </p>

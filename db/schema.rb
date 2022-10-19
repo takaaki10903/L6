@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_19_092146) do
+ActiveRecord::Schema.define(version: 2022_10_19_135212) do
 
-  create_table "car_items", force: :cascade do |t|
+  create_table "cart_items", force: :cascade do |t|
     t.integer "qty"
     t.integer "product_id"
     t.integer "cart_id"
